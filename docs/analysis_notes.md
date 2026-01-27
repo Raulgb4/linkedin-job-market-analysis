@@ -35,6 +35,8 @@ LinkedIn Job Market Analysis (2023–2024)
 - Inconsistent formats:
 - Unexpected values:
 
+  - Registers detected with `country`, `state`, `zipcode`  field containing `"0"`, which is not valid null.
+  - Registers detected with `address` field containing `"."` and `"-"`, which is not valid null.
 ---
 
 ## 4. Cleaning & Preparation Decisions
@@ -94,3 +96,6 @@ LinkedIn Job Market Analysis (2023–2024)
 - What worked well:
 - What was harder than expected:
 - Lessons learned so far:
+
+
+---
