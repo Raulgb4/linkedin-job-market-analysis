@@ -31,12 +31,15 @@ LinkedIn Job Market Analysis (2023–2024)
 
 ## 3. Data Quality Issues
 - Missing values:
+  - Too many nulls in company_size 24473 - 21699 = 2774 nulls in companies
+  - Too many nulls in pay_period in salaries
+  - Too many nulls in closed_time in postings
 - Duplicates:
 - Inconsistent formats:
 - Unexpected values:
 
-  - Registers detected with `country`, `state`, `zipcode`  field containing `"0"`, which is not valid null.
-  - Registers detected with `address` field containing `"."` and `"-"`, which is not valid null.
+  - Registers detected with `country`, `state`, `zipcode`  field containing `"0"`, which is not valid null in companies
+  - Registers detected with `address` field containing `"."` and `"-"`, which is not valid null
 ---
 
 ## 4. Cleaning & Preparation Decisions
