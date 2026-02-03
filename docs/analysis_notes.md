@@ -8,11 +8,6 @@ LinkedIn Job Market Analysis (2023–2024)
 
 ## Data Quality Issues (Dataset understanding and EDA)
 
-  - Too many nulls in company_size 24473 - 21699 = 2774 nulls in companies
-  - Too many nulls in pay_period in salaries
-  - Too many nulls in closed_time in postings
-  - Registers detected with `country`, `state`, `zipcode`  field containing `"0"`, which is not valid null in companies
-  - Registers detected with `address` field containing `"."` and `"-"`, which is not valid nul in companies
   - The location field mixes different geographic levels (e.g., country and city), resulting in a non-homogeneous granularity.
     (e.g., "United States", "New York, NY", "San Francisco, CA") in postings
   - Job titles are not standardized, and similar roles may appear under different names (e.g., variations by seniority 
