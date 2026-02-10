@@ -1,94 +1,74 @@
 # LinkedIn Job Market Analysis (2023–2024)
 
-## 📌 Project Overview
+## 📌 Overview
 This project analyzes the job market using a large-scale dataset of LinkedIn job postings published between **2023 and 2024**.  
-The goal is to extract meaningful insights about job demand, skills, locations, work modalities, and salary patterns, following a workflow similar to what is commonly done in **data consulting and business analytics environments**.
+The objective is to extract **actionable insights** about job demand, skills, locations, work modalities, and salary patterns, following a workflow aligned with **real-world data analytics and consulting practices**.
 
-The project is designed as an **end-to-end data analysis**, focusing on data understanding, cleaning, exploration, and interpretation rather than predictive modeling.
+The analysis focuses on **understanding and interpreting data**, rather than predictive modeling.
 
 ---
 
 ## 🎯 Objectives
-The main objectives of this project are:
-
-- Explore and understand the structure of a real-world job postings dataset
-- Analyze job demand by role, industry, company, and location
-- Identify the most in-demand skills across different job categories
-- Compare remote, hybrid, and on-site job distributions
-- Examine salary information where available
-- Practice professional analytical workflows using Python and SQL
+- Analyze job demand by role, industry, and location  
+- Identify the most in-demand skills across job postings  
+- Examine the distribution of remote vs on-site roles  
+- Explore salary patterns by role and geography where data is available  
+- Apply a professional, end-to-end analytical workflow using Python and SQL  
 
 ---
 
 ## 📂 Dataset
 **Source:** LinkedIn Job Postings Dataset (2023–2024)  
-**Records:** 124 thousand+ job postings  
-**Format:** Multiple CSV files  
+**Size:** 124k+ job postings across multiple CSV files  
 
-The dataset contains detailed information about:
-- Job postings (title, description, location, work type, salary)
-- Companies (industry, size, headquarters location, followers)
-- Skills associated with each job
-- Benefits offered by companies
-- Industry classifications
+The dataset includes information about:
+- Job postings (title, location, work type, salary)
+- Companies and industries
+- Skills linked to job postings
+- Benefits and compensation data
 
 > ⚠️ Raw dataset files are not included in this repository.
 
 ---
 
-## 🔧 Technologies Used
-- **Python 3.11**
-- **pandas** – data manipulation and analysis
-- **numpy** – numerical operations
-- **matplotlib / seaborn** – data visualization
-- **SQL** – relational analysis and analytical queries
-- **Git & GitHub** – version control
-- *(Optional)* Apache Spark / Databricks for scalability exploration
+## 🔧 Technologies
+- **Python** (pandas, numpy)
+- **Matplotlib / Seaborn** for visualization
+- **SQL** for relational analysis
+- **Git & GitHub** for version control  
+- *(Optional)* Power BI for dashboarding
 
 ---
 
 ## 🧠 Methodology
-The analysis follows these main steps:
-
-1. **Data Exploration**  
-   Initial inspection of the dataset to understand table relationships, key fields, and data quality.
-
-2. **Data Cleaning & Preparation**  
-   Handling missing values, normalizing formats, and preparing data for relational analysis.
-
-3. **Exploratory Data Analysis (EDA)**  
-   Identifying patterns and trends related to job roles, skills, industries, locations, and work modalities.
-
-4. **SQL-Based Analysis**  
-   Performing joins and aggregations across multiple tables to compute business-oriented metrics.
-
-5. **Insight Generation**  
-   Interpreting results and translating findings into meaningful conclusions about the job market.
+1. Data exploration and understanding  
+2. Data cleaning and preparation  
+3. Exploratory analysis (EDA)  
+4. Visualization and storytelling focused on decision-making  
 
 ---
 
-## 📊 Key Questions Addressed
+## 📊 Key Questions
 - Which job roles are most in demand?
-- What skills appear most frequent across job postings?
+- What skills appear most frequently across job postings?
 - How does job demand vary by location and industry?
-- What proportion of roles are remote, hybrid, or on-site?
-- Are there observable salary patterns by role or geography?
+- What proportion of roles explicitly allow remote work?
+- How do salary levels vary across roles and locations?
 
 ---
 
 ## 📌 Notes
-- This project focuses on **analytical insights**, not machine learning.
-- Any advanced modeling or NLP tasks are considered optional extensions.
-- Observations, decisions, and intermediate findings are documented separately in analysis notes during development.
+- Salary analysis is based on **annualized compensation** to ensure comparability.
+- Remote work analysis reflects **explicitly declared remote roles**, not a full hybrid/on-site classification.
+- Results are interpreted with volume-based filters to avoid misleading conclusions.
 
 ---
 
 ## 🚀 Future Improvements
-- Time-based trend analysis of job demand
-- Deeper salary normalization and compensation analysis
-- Skill clustering by role or industry
-- Interactive dashboards for data exploration
-- Scalable analysis using Spark
+- Time-based analysis of market trends  
+- Deeper salary normalization  
+- Skill clustering by role or industry  
+- Interactive dashboards (Power BI)  
 
 ---
 
@@ -96,9 +76,3 @@ The analysis follows these main steps:
 **Raúl García Balongo**  
 Computer Science Engineering (Information Systems)  
 Data Analysis & Business Intelligence
-
----
-
-## 📜 License
-This project is intended for **educational and portfolio purposes**.  
-Dataset usage follows the original license and terms provided on Kaggle.

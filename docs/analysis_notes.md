@@ -1,59 +1,66 @@
-# Analysis Notes
-LinkedIn Job Market Analysis (2023–2024)
-
-> Working document for exploration, observations, and decisions taken during the analysis.
-> This file is not intended as final documentation.
+# Analysis Notes  
+## LinkedIn Job Market Analysis (2023–2024)
 
 ---
 
-## Data Quality Issues (Dataset understanding and EDA)
+## 1. Context and Audience
 
-- The `location` field mixes different geographic levels (e.g., country-level and
-  city-level locations such as "United States", "New York, NY", "San Francisco, CA").
-  This heterogeneity reflects the way job locations are reported on the platform.
-  No normalization was applied to avoid introducing assumptions or inaccuracies.
-  The field is therefore treated as a descriptive attribute with limited
-  geographic comparability.
+### Target audience
+**Hiring Managers / Talent & HR decision-makers**
 
-- Job titles are not standardized, and similar roles may appear under different
-  names due to variations in wording and seniority levels. Title normalization was
-  not performed during the cleaning phase, as it would require semantic analysis
-  or domain-specific taxonomies and could introduce subjective bias.
+The analysis is designed to support hiring and workforce planning decisions by providing a clear,
+data-driven view of the current job market based on real LinkedIn job postings.
 
-- The `remote_allowed` field does not contain an explicit negative category (0).
-  Only positive values (1.0) are present, while the remaining records are missing.
-  This indicates that the field functions as a positive flag for explicitly
-  remote-allowed positions rather than a complete remote vs non-remote
-  classification. Missing values were left unchanged.
-
+The focus is on **market signals and patterns**, not on predictive modeling.
 
 ---
 
-## Questions Arising During Analysis
-- Questions to investigate later:
-- Potential business questions:
-- Hypotheses to validate:
+## 2. Data Quality and Analytical Considerations
+
+This section summarizes the main dataset characteristics and limitations that influence
+how results should be interpreted.
+
+### 2.1 Location field
+- The `location` field mixes different geographic levels (e.g. country-level and city-level:
+  `"United States"`, `"New York, NY"`, `"San Francisco, CA"`).
+- This reflects how locations are reported on LinkedIn.
+- No normalization was applied to avoid introducing assumptions or inaccuracies.
+- Location is therefore treated as a **descriptive attribute**, suitable for relative comparisons
+  but not precise geographic aggregation.
+
+### 2.2 Job titles
+- Job titles are not standardized.
+- Similar roles may appear under different names due to wording, seniority, or company conventions.
+- Title normalization was intentionally avoided, as it would require semantic modeling
+  and could introduce subjective bias.
+- Titles are used as a **practical proxy for roles**, with volume-based filters applied
+  to ensure robustness.
+
+### 2.3 Remote work indicator
+- The `remote_allowed` field only contains positive values (`1`) and missing values.
+- Missing values do **not** indicate on-site roles, only absence of explicit remote information.
+- The analysis therefore focuses on **explicitly remote-allowed roles**, not a full
+  remote vs hybrid vs on-site classification.
+
+### 2.4 Salary data
+- Salary information is not available for all postings.
+- Compensation analysis is based on **annualized salary values** to ensure comparability
+  across hourly and yearly pay structures.
+- Volume thresholds are applied to avoid drawing conclusions from sparse data.
 
 ---
 
-## Analysis Direction Decisions
-- Scope adjustments:
-- Focus areas selected:
-- Analyses postponed or discarded:
+## 3. Visualization and Storytelling Framework
 
----
+### Purpose of this phase
+This phase transforms analytical results into **clear, decision-oriented insights** through:
+- curated metrics
+- focused visualizations
+- narrative structure
 
-## Notes on SQL Modeling
-- Tables created:
-- Indexing considerations:
-- Query performance notes:
-
----
-
-## Visualization Ideas
-- Charts to build:
-- Metrics to highlight:
-- Storytelling ideas:
-
+The output of this phase feeds directly into:
+- the Visualization & Storytelling notebook
+- potential Power BI dashboards
+- portfolio presentation material
 
 ---
